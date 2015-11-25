@@ -1,0 +1,13 @@
+{
+	"name":"hezhong"
+	,"version":"0.0.1"
+	,"description":"marking"
+	,"bugs":{
+		"email":"msooblog@outlook.com"
+	}
+	,"main":"./server.js"
+	,"script":{
+		"hello":"node hello.js"
+	}
+	,"people fields":"shynome"
+}

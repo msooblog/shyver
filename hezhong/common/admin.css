@@ -1,0 +1,165 @@
+
+/*login*/
+#login{
+  /* background:red; */
+  margin: 20px 10px;
+  font-size: 16px;
+}
+
+#login input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 0;
+    font-size: inherit;
+}
+/*header*/
+#header{
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  background: rgb(212, 19, 19);
+  color:white;
+}
+#header .nav{
+  flex: 1;
+  text-align: center;
+}
+
+/*container*/
+#container{
+  height: calc( 100vh - 40px );
+  position: relative;
+}
+/*产品列表*/
+.product{
+  display: block;
+  height: 100%;
+  width: 100%;
+  /* background: rgb(250, 140, 53); */
+  color: white;
+  height: inherit;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.product .bar{
+  height: 90px;
+  line-height: 90px;
+  position: relative;
+  animation: goods-into 0.35s;
+}
+@keyframes goods-into{
+  from{
+    transform: matrix(1,0,0,1,360,0);
+  }
+  to{
+    transform: matrix(1,0,0,1,0,0);
+  }
+}
+.product .bar .handle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  line-height: inherit;
+  text-indent: 30px;
+  background: rgb(30, 146, 30);
+  font-size: 16px;
+}
+.product .goods{
+  display: block;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  -webkit-transition:all 0.35s;
+  transition: all 0.35s;
+  z-index: 2;
+  background: rgb(246, 234, 234);
+  color: rgb(0,0,0);
+  border: 1px solid rgb(220,220,220);
+  border-left: none;
+  border-right: none;
+}
+.product .goods>*{
+  display: inline-block;
+}
+.product .goods>.price{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height:80px;
+  width:80px;
+  text-align:center;
+}
+.product .goods>.price>*{
+  display: block;
+}
+.product .goods>.price>.title{
+  height: 30px;
+  line-height: 30px;
+}
+.product .goods>.price>.main{
+  height: 50px;
+  line-height: 50px;
+}
+.product .goods>.main>*{
+  display: block;
+}
+.product .goods>.main>.name{
+  height: 30px;
+  line-height: 30px;
+}
+.product .goods>.main>.description{
+  height: 50px;
+  line-height: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*预留空行*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

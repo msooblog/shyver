@@ -1,0 +1,140 @@
+*{
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
+  font-family: '微软雅黑';
+  font-size: 13px;
+}
+.tips{
+  display:block;
+  height: 60px;
+  font-size: 14px;
+  text-align: center;
+  background: rgb(246, 234, 234);
+  color: rgb(24, 22, 22);
+  line-height: 60px;
+}
+#load{
+  display: block;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;/*暂时就这么点，不够再提*/
+  line-height: 100vh;
+  text-align: center;
+  background: rgb(50,50,50);
+  color: white;
+}
+#load>*{
+  display: inline-block;
+  width: 100%;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+body{
+  overflow: hidden;
+}
+
+/*side*/
+#side{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  background: rgb(250, 140, 53);
+  overflow: hidden;
+  -webkit-transform: translateX(-100vw);
+  transform: translateX(-100vw);
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+#side.active{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+#side>.bar{
+  background: white;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  /*-webkit-transition:all 0.35s;*/
+  /*transition: translateX 0.35s;*/
+  z-index: 1;
+  visibility: hidden;
+}
+#side>.bar.active{
+  z-index: 2;
+  -webkit-animation: side-bar-in 0.35s;
+  animation: side-bar-in 0.35s;
+  visibility: visible;
+}
+@-webkit-keyframes side-bar-in{
+  from{
+    visibility: visible;
+    -webkit-transform: translateX(100%);
+  }
+  to{
+    visibility: visible;
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes side-bar-in{
+  from{
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  to{
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+#side>.bar.hidden{
+  z-index: 2;
+  -webkit-animation: side-bar-out 0.35s;
+  animation: side-bar-out 0.35s;
+}
+@-webkit-keyframes side-bar-out{
+  from{
+    visibility: visible;
+    -webkit-transform: translateX(0);
+  }
+  to{
+    visibility: visible;
+    -webkit-transform: translateX(-100%);
+  }
+}
+@keyframes side-bar-out{
+  from{
+    visibility: visible;
+    transform: translateX(0);
+  }
+  to{
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+#side .title{
+  font-size: 16px;
+  text-align: center;
+}
+
+/*ul*/
+ul{
+  overflow-y:auto;
+  overflow-x::hidden;
+  height: 100%;
+}
+li{
+  min-height: 90px;
+}

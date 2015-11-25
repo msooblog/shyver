@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>Document</title>
+	<link rel="stylesheet" href="/file/shy.ui.css">
+	<link rel="stylesheet" href="/file/admin.css">
+	<script src="/file/shy.js"></script>
+	<script src="/file/shy.swipe.js"></script>
+	<script src="/file/shy.ui.js"></script>
+	<script src="/file/shy.ajax.js"></script>
+	<script src="/file/admin.js"></script>
+</head>
+<body>
+<!--唯一主文件-->
+<div id="load">加载中</div>
+<div id="side" class="">
+	<div class="bar login">
+		<div class="title">管理登录</div>
+		<div id="login">
+			<input type="text" placeholder="用户名" maxlength="16">
+			<input type="password" placeholder="密码" maxlength="24">
+			<input type="button" value="登录">	
+		</div>
+	</div>
+	<div class="bar logined">
+		<div class="title">root</div>
+		<div class="exit">
+			<button id="exit">退出登录</button>
+		</div>
+	</div>
+</div>
+<div id="header">
+	<span class="nav" data-id="order">订单列表</span>
+	<span class="nav" data-id='goods'>商品列表</span>
+	<span class="nav" data-id="product_add">添加商品</span>
+</div>
+<div id="container">
+<div class="page product"	id="product_all"	data-title="所有">
+	<ul class="main">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<div class="tips end">继续上拉加载更多</div>
+</div>
+<div class="page active product"	data-title="推荐"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+	"name"		:	"server-file-read"
+	,"main"		:	"./file.js"
+}
